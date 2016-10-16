@@ -1,11 +1,4 @@
-/*********************************************************************
- * #### jQuery-iBacor-The-Movie-API v01.1 ####
- * Coded by Ican Bachors 2016.
- * http://ibacor.com/labs/jquery-ibacor-the-movie-api
- * Updates will be posted to this site.
- *********************************************************************/
-
-var ibacor_themovie = function(h) {
+var githubcheerful_themovie = function(h) {
     var j = getParameterByName('search'),
         get_id = getParameterByName('id');
     if (j != '') {
@@ -21,7 +14,7 @@ var ibacor_themovie = function(h) {
 		closeEffect : 'fade'
 	});
     $('#submit').click(function() {
-        $('#ibacor_themovie').html('');
+        $('#github-cheerful_themovie').html('');
         var a = $('#search_movie').val();
         window.history.pushState(null, null, "?search=" + a);
         ibacor_search_movie(a, h, 1);
@@ -48,7 +41,7 @@ var ibacor_themovie = function(h) {
                 if (c.results[i].poster_path != null) {
                     b += '<img src="http://image.tmdb.org/t/p/w500' + c.results[i].poster_path + '" alt="ibacor" class="poster">'
                 } else {
-                    b += '<img src="http://ibacor.com/bcr_asset/images/media/547617dc77ece9e196f9093d03312488.jpg" class="poster">'
+                    b += '<img src="#img" class="poster">'
                 }
                 d += '<li class="col-md-3 col-sm-4 movie">';
                 d += '<a class="themovie" data-idmovie="' + c.results[i].id + '" title="' + x + '" href="#">';
@@ -88,7 +81,7 @@ var ibacor_themovie = function(h) {
                 if (c.results[i].poster_path != null) {
                     b += '<img src="http://image.tmdb.org/t/p/w500' + c.results[i].poster_path + '" alt="ibacor" class="poster">'
                 } else {
-                    b += '<img src="http://ibacor.com/bcr_asset/images/media/547617dc77ece9e196f9093d03312488.jpg" class="poster">'
+                    b += '<img src="#img" class="poster">'
                 }
                 d += '<li class="col-md-3 col-sm-4 movie">';
                 d += '<a class="themovie" data-idmovie="' + c.results[i].id + '" title="' + x + '" href="#">';
@@ -127,7 +120,7 @@ var ibacor_themovie = function(h) {
                 if (i == 0) {
                     c += '<a href="http://image.tmdb.org/t/p/w500' + b.images.backdrops[i].file_path + '" class="ins_popup" rel="ibacor_gallery" title="Show All"><img src="http://image.tmdb.org/t/p/w500' + b.images.backdrops[i].file_path + '" alt="" class="poster"></a>'
                 } else {
-                    c += '<a style="display:none" href="http://image.tmdb.org/t/p/w500' + b.images.backdrops[i].file_path + '" class="ins_popup" rel="ibacor_gallery" title="Show All"><img src="http://image.tmdb.org/t/p/w500' + b.images.backdrops[i].file_path + '" alt="" class="poster"></a>'
+                    c += '<a style="display:none" href="http://image.tmdb.org/t/p/w500' + b.images.backdrops[i].file_path + '" class="ins_popup" rel="github-cheerful_gallery" title="Show All"><img src="http://image.tmdb.org/t/p/w500' + b.images.backdrops[i].file_path + '" alt="" class="poster"></a>'
                 }
             });
             $('.bcr_bek').html(c)
@@ -147,10 +140,10 @@ var ibacor_themovie = function(h) {
                 c += '<div class="col-md-3 col-sm-4 movie">';
                 if (b.casts.cast[i].profile_path != null) {
                     c += '<a href="http://image.tmdb.org/t/p/w500' + b.casts.cast[i].profile_path + '" class="ins_popup" rel="ibacor_gallerycr" title="' + x + '">';
-                    c += '<img src="http://image.tmdb.org/t/p/w500' + b.casts.cast[i].profile_path + '" alt="ibacor" class="poster">'
+                    c += '<img src="http://image.tmdb.org/t/p/w500' + b.casts.cast[i].profile_path + '" alt="github-cheerful" class="poster">'
                 } else {
-                    c += '<a href="http://ibacor.com/bcr_asset/images/user.jpg" class="ins_popup" rel="ibacor_gallerycr" title="' + x + '">';
-                    c += '<img src="http://ibacor.com/bcr_asset/images/user.jpg" alt="ibacor" class="poster">'
+                    c += '<a href="#" class="ins_popup" rel="ibacor_gallerycr" title="' + x + '">';
+                    c += '<img src="#" alt="ibacor" class="poster">'
                 }
                 c += '</a>';
                 c += '</div>'
@@ -171,10 +164,10 @@ var ibacor_themovie = function(h) {
                 c += '<div class="col-md-3 col-sm-4 movie">';
                 if (b.casts.crew[i].profile_path != null) {
                     c += '<a href="http://image.tmdb.org/t/p/w500' + b.casts.crew[i].profile_path + '" class="ins_popup" rel="ibacor_gallerycr" title="' + x + '">';
-                    c += '<img src="http://image.tmdb.org/t/p/w500' + b.casts.crew[i].profile_path + '" alt="ibacor" class="poster">'
+                    c += '<img src="http://image.tmdb.org/t/p/w500' + b.casts.crew[i].profile_path + '" alt="github-cheerful" class="poster">'
                 } else {
-                    c += '<a href="http://ibacor.com/bcr_asset/images/user.jpg" class="ins_popup" rel="ibacor_gallerycr" title="' + x + '">';
-                    c += '<img src="http://ibacor.com/bcr_asset/images/user.jpg" alt="ibacor" class="poster">'
+                    c += '<a href="#" class="ins_popup" rel="github-cheerful_gallerycr" title="' + x + '">';
+                    c += '<img src="#" alt="github-cheerful" class="poster">'
                 }
                 c += '</a>';
                 c += '</div>'
